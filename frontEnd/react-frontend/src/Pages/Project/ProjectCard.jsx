@@ -4,15 +4,17 @@ import { Button } from '@/components/ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import React from 'react'
 import { Badge } from '@/components/ui/badge'
+import { useNavigate } from 'react-router-dom'
 
 function ProjectCard() {
+    const navigate=useNavigate()
     return (
         <Card className="p-5 w-full lg:max-w-2xl mt-1">
             <div className='space-y-1'>
                 <div className='space-y-1'>
                     <div className='flex justify-between'>
                         <div className='flex items-center gap-6'>
-                            <div className="cursor-pointer font-bold text-sm">
+                            <div  onClick={()=>navigate("/project/3")} className="cursor-pointer font-bold text-sm">
                                 Create E-commerce Project
                             </div>
                             <DotFilledIcon />
